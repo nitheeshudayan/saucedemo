@@ -93,12 +93,13 @@ assert(errorMessage.getText().equals("Invalid value"));
         WebElement lastNameInput = driver.findElement(By.id("last-name"));
         WebElement postalCodeInput = driver.findElement(By.id("postal-code"));
         WebElement continueButton = driver.findElement(By.cssSelector("input[value='CONTINUE']"));
-                               
+        firstNameInput.sendKeys("");                        
+        lastNameInput.sendKeys("Yout last Name")                       
         firstNameInput.sendKeys("Your first Name");
         lastNameInput.sendKeys("Your last Name");
-        postalCodeInput.sendKeys("12345697");
-        continueButton.click();
-                               
+         postalCodeInput.sendKeys("12346879");
+         continueButton.click();                      
+      
    // Finish the checkout
       WebElement finishButton = driver.findElement(By.cssSelector("a.btn_action.cart_button"));                         
        finishButton.click();
