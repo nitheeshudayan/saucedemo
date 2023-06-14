@@ -93,29 +93,33 @@ assert(errorMessage.getText().equals("Invalid value"));
         WebElement lastNameInput = driver.findElement(By.id("last-name"));
         WebElement postalCodeInput = driver.findElement(By.id("postal-code"));
         WebElement continueButton = driver.findElement(By.cssSelector("input[value='CONTINUE']"));
-
-        firstNameInput.sendKeys("Your First Name");
-        lastNameInput.sendKeys("Your Last Name");
-        postalCodeInput.sendKeys("585629");
+                               
+        firstNameInput.sendKeys("Your first Name");
+        lastNameInput.sendKeys("Your last Name");
+        postalCodeInput.sendKeys("12345697");
         continueButton.click();
+                               
+   // Finish the checkout
+      WebElement finishButton = driver.findElement(By.cssSelector("a.btn_action.cart_button"));                         
+       finishButton.click();
+                               
+   //Return to the homepage
+     WebElement backtoHomeButton = driver.findElement(BY.cssSelector("button.cart_button"));
+     backToHomeButton.click();                          
 
-        // Finish the checkout
-        WebElement finishButton = driver.findElement(By.cssSelector("a.btn_action.cart_button"));
-        finishButton.click();
+   //Perform logoutbackToHomeButton.click(); 
 
-        // Return to the home page
-        WebElement backToHomeButton = driver.findElement(By.cssSelector("button.cart_button"));
-        backToHomeButton.click();
+    //Perform logout
+      WebElement menuButton =driver.findElement(By.cssSelkector(".bm-burger-button")); 
+      menuButton.click(); 
+                               
+      WebElement logoutLink = driver.findElement(By.id("logout_sidebar_link"));
+      logoutLink.click();
+                               
+    // Wait fior a while before closing the browser   
 
-        // Perform logoutbackToHomeButton.click();
-
-        // Perform logout
-        WebElement menuButton = driver.findElement(By.cssSelector(".bm-burger-button"));
-        menuButton.click();
-        WebElement logoutLink = driver.findElement(By.id("logout_sidebar_link"));
-        logoutLink.click();
-
-        // Wait for a while before closing the browser
+      
+      
 
        
         
