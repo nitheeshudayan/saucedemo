@@ -108,16 +108,17 @@ assert(errorMessage.getText().equals("Invalid value"));
      backToHomeButton.click();                          
 
    //Perform logoutbackToHomeButton.click(); 
+   //Perform logout
+     WebElemnt menuButton = driver.findElement(By.cssSelector(".bm-burger-button"));
+     menuButton.click();
+     WebElement logoutLink = driver.findElement(By.id("logout_sidebar_link"));
+     logoutLink.click();  
+   //Wait for a while before closing the browser                            
 
-    //Perform logout
-      WebElement menuButton =driver.findElement(By.cssSelkector(".bm-burger-button")); 
-      menuButton.click(); 
+ 
+     
                                
-      WebElement logoutLink = driver.findElement(By.id("logout_sidebar_link"));
-      logoutLink.click();
-                               
-    // Wait fior a while before closing the browser   
-
+    
       
       
 
