@@ -88,8 +88,8 @@ assert(errorMessage.getText().equals("Invalid value"));
 // Go to the Checkout page
         WebElement checkoutButton = driver.findElement(By.cssSelector(".checkout_button"));
         checkoutButton.click();
-
-        // Enter details on the information page
+                               
+// Enter details on the information page
         WebElement firstNameInput = driver.findElement(By.id("first-name"));
         WebElement lastNameInput = driver.findElement(By.id("last-name"));
         WebElement postalCodeInput = driver.findElement(By.id("postal-code"));
@@ -117,3 +117,7 @@ assert(errorMessage.getText().equals("Invalid value"));
         logoutLink.click();
 
         // Wait for a while before closing the browser
+
+        // Enter details on the information page
+        WebElement firstNameInput = driver.findElement(By.id("first-name"));
+        
