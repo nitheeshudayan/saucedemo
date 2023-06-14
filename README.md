@@ -97,7 +97,7 @@ assert(errorMessage.getText().equals("Invalid value"));
 
         firstNameInput.sendKeys("Your First Name");
         lastNameInput.sendKeys("Your Last Name");
-        postalCodeInput.sendKeys("12345");
+        postalCodeInput.sendKeys("585629");
         continueButton.click();
 
         // Finish the checkout
